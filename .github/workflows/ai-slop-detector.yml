@@ -12,6 +12,6 @@ jobs:
   ai-slop-detector:
     runs-on: ubuntu-latest
     steps:                                                                                                                                                                                                                                                                                                        
-      - uses: Tomislav-Sola/ai-slop-detector@phase-4-action-release
+      - uses: Tomislav-Sola/ai-slop-detector@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
