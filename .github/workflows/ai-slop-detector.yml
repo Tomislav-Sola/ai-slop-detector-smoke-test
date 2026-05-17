@@ -1,0 +1,17 @@
+name: AI-slop check
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  pull-requests: write                                                                                                                                                                                                                                                                                            
+  contents: read                                                                                                                                                                                                                                                                                                  
+
+jobs:                                                                                                                                                                                                                                                                                                             
+  ai-slop-detector:
+    runs-on: ubuntu-latest
+    steps:                                                                                                                                                                                                                                                                                                        
+      - uses: Tomislav-Sola/ai-slop-detector@phase-4-action-release
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
